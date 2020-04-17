@@ -49,7 +49,7 @@ class InteractiveRecord
   end
 
   def save
-    DB[:conn].execute("INSERT INTO #{table_name_for_insert} 
+    DB[:conn].execute("INSERT INTO #{table_name_for_insert}
     (#{col_names_for_insert}) VALUES (?)",
     [Values_for_insert])
   end
