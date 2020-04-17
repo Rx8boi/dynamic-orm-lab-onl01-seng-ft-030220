@@ -59,7 +59,7 @@ class InteractiveRecord
   #More class methods
 
   def self.find_by_name
-    DB[:conn].execute("SELECT * FROM #{self.table_name} WHERE name = ?", [name])
+    DB[:conn].execute("SELECT name FROM #{self.table_name} WHERE name = ?", [name])
   end
 
   def self.find_by
