@@ -21,6 +21,9 @@ class InteractiveRecord
     column_names.compact
   end
 
+  self.column_names.each do |col|
+    attr_accessor col.to_sym
+  end
 
 #Instance methods to insert data into db
 
